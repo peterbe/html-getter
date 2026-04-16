@@ -1,0 +1,15 @@
+{
+  "name": "html-getter",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "html-getter": "bun run src/html-getter.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
