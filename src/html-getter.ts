@@ -70,7 +70,6 @@ async function main() {
   await using view = new WebView({ width: 2000, height: 3000 })
   await view.navigate(url)
   if (values.head) {
-    // console.log(await view.evaluate("document.head.outerHTML"))
     console.log(await view.evaluate("document.head.innerHTML"))
   } else if (values.body) {
     console.log(await view.evaluate("document.body.innerHTML"))
