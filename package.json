@@ -1,16 +1,22 @@
 {
   "name": "html-getter",
-  "module": "index.ts",
-  "type": "module",
   "private": true,
+  "type": "module",
+  "module": "index.ts",
   "scripts": {
     "html-getter": "bun run src/html-getter.ts",
     "build": "bun build src/html-getter.ts --target=bun --outfile out/html-getter --compile --bytecode",
     "build:linux-arm64": "bun build src/html-getter.ts --target=bun-linux-arm64 --outfile out/html-getter-linux-arm64 --compile --bytecode",
-    "build:linux-x64": "bun build src/html-getter.ts --target=bun-linux-x64 --outfile out/html-getter-linux-x64 --compile --bytecode"
+    "build:linux-x64": "bun build src/html-getter.ts --target=bun-linux-x64 --outfile out/html-getter-linux-x64 --compile --bytecode",
+    "lint": "oxlint",
+    "lint:fix": "oxlint --fix",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "1.3.13",
+    "oxfmt": "^0.47.0",
+    "oxlint": "^1.62.0"
   },
   "peerDependencies": {
     "typescript": "^5"
