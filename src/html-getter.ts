@@ -28,20 +28,12 @@ async function main() {
   if (values.help || args.length === 0) {
     // console.log(positionals)
     const executable = (positionals[0] || "bun").split("/").slice(-1)[0];
-    const program = (positionals[1] || "html-getter.ts")
-      .split("/")
-      .slice(-1)[0];
+    const program = (positionals[1] || "html-getter.ts").split("/").slice(-1)[0];
     console.log(`Usage: ${executable} ${program} [options] <url>`);
     console.log("Options:");
-    console.log(
-      "  --screenshot <path>  Save a screenshot of the page to the specified path",
-    );
-    console.log(
-      "  --head               Output only the head HTML instead of the full document",
-    );
-    console.log(
-      "  --body               Output only the body HTML instead of the full document",
-    );
+    console.log("  --screenshot <path>  Save a screenshot of the page to the specified path");
+    console.log("  --head               Output only the head HTML instead of the full document");
+    console.log("  --body               Output only the body HTML instead of the full document");
     console.log("  -h, --help           Show this help message");
     if (args.length === 0) {
       console.error("Error: URL is required");
